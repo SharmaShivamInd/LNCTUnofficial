@@ -4,10 +4,14 @@
 
 Mid-semester exams come around twice a semester, and the single most useful thing to study from is what was actually asked last time. Those papers usually live in scattered WhatsApp groups, blurry photos and dead Drive links. This project collects them in one place and makes them searchable.
 
+
+                          **Live site:** (https://lnctunofficial.onrender.com/)
+                          
+
 ![Home Page](src/main/resources/static/images/ss1.png)
 ![Semester Page](src/main/resources/static/images/ss2.png)
 ![Midsem_paper Page](src/main/resources/static/images/ss3.png)
-**Live site:** (https://lnctunofficial.onrender.com/)
+
 
 ---
 
