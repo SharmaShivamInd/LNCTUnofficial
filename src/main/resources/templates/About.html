@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | LNCT Unofficial</title>
+    <meta name="description" content="The story behind LNCT Unofficial — a student-built archive of previous year question papers, organized by semester and subject.">
+    <meta property="og:title" content="About | LNCT Unofficial">
+    <meta property="og:description" content="Built by a student, for students of LNCT. Learn why this PYQ archive exists and how it started.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <link th:href="@{/css/About.css}" rel="stylesheet">
+    <link th:href="@{/css/glass.css}" rel="stylesheet">
+    <link th:href="@{/css/shared.css}" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<header class="about-header">
+    <h1 class="title">About Us</h1>
+    <p class="tagline">Built by a student, for students of LNCT.</p>
+</header>
+
+<main class="about-grid">
+    <article class="card card--problem" style="--delay:.1s">
+        <span class="card-eyebrow">The problem</span>
+        <h2>Why this exists</h2>
+        <p>Before my first mid-sem, I wanted to know what kind of questions actually get asked — one focused night beats a week of guessing. The catch: only <strong>one</strong> PYQ was floating around.</p>
+        <p>This site fixes that by collecting papers subject-wise for every semester, so you always know what to expect walking into an exam hall.</p>
+    </article>
+
+    <article class="card card--story" style="--delay:.2s">
+        <span class="card-eyebrow">The story</span>
+        <h2>How it started</h2>
+        <p>I started this project knowing only Java. I learned HTML and CSS while shipping it, with AI copilots filling the gaps. Every page here is a checkpoint on that learning curve.</p>
+        <ul class="stats" role="list">
+            <li><span class="stat-num">2</span><span class="stat-label">Semesters</span></li>
+            <li><span class="stat-num">10+</span><span class="stat-label">Subjects</span></li>
+            <li><span class="stat-num">30+</span><span class="stat-label">Papers</span></li>
+        </ul>
+    </article>
+
+    <article class="card card--dev" style="--delay:.3s">
+        <span class="card-eyebrow">The developer</span>
+        <div class="avatar-ring">
+            <img class="avatar" th:src="@{/images/Developer.png}" alt="Portrait of Sharma, the developer" width="140" height="140" loading="lazy">
+        </div>
+        <h2>Sharma</h2>
+        <p class="role">Student · Novice Developer</p>
+        <p>Java-first, web-curious. Ships small tools that scratch real student itches.</p>
+        <ul class="socials" role="list">
+            <li><a href="https://github.com/SharmaShivamInd" aria-label="GitHub">GitHub</a></li>
+            <li><a href="mailto:shivamsharmacet@gmail.com" aria-label="Email">Email</a></li>
+            <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        </ul>
+    </article>
+</main>
+
+<a class="cta" href="contact.html">
+    <span>Missing a paper? Contribute</span>
+    <span class="arrow" aria-hidden="true">→</span>
+</a>
+
+<script>
+    // Pointer-tracked spotlight for glass cards.
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('pointermove', e => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+            card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+        });
+    });
+</script>
+</body>
+</html>

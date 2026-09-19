@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found</title>
+    <link rel="stylesheet" th:href="@{/css/shared.css}">
+    <link rel="stylesheet" th:href="@{/css/glass.css}">
+    <style>
+        /* ===== 404 page — reuses existing glass tokens from glass.css ===== */
+        main.not-found {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100dvh - 100px); /* header is ~100px tall */
+            padding: 5vw 20px;
+        }
+
+        .not-found-card {
+            background: var(--glass-bg);
+            border: var(--glass-border);
+            box-shadow: var(--glass-shadow-dk);
+            backdrop-filter: var(--glass-blur-lg);
+            -webkit-backdrop-filter: var(--glass-blur-lg);
+            border-radius: 16px;
+            max-width: 480px;
+            width: 100%;
+            padding: 56px 40px;
+            text-align: center;
+            color: #fff;
+            animation: nf-rise 0.5s ease both;
+        }
+
+        @keyframes nf-rise {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .not-found-code {
+            font-size: clamp(4rem, 12vw, 6rem);
+            font-weight: 700;
+            line-height: 1;
+            color: #ffc107;
+            text-shadow: 0 4px 20px rgba(255, 193, 7, 0.35);
+            letter-spacing: -0.02em;
+        }
+
+        .not-found-title {
+            margin-top: 18px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .not-found-body {
+            margin-top: 12px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.75);
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .not-found-actions {
+            margin-top: 32px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nf-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+        }
+
+        .nf-btn-primary {
+            background: rgba(255, 193, 7, 0.85);
+            color: #1a1a1a;
+            border: 1px solid rgba(255, 193, 7, 0.9);
+        }
+        .nf-btn-primary:hover,
+        .nf-btn-primary:focus-visible {
+            background: #ffc107;
+        }
+
+        .nf-btn-secondary {
+            background: var(--glass-bg-dark);
+            color: #fff;
+            border: var(--glass-border-dk);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+        }
+        .nf-btn-secondary:hover,
+        .nf-btn-secondary:focus-visible {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        @media (max-width: 480px) {
+            .not-found-card { padding: 40px 24px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .not-found-card { animation: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="not-found">
+    <div class="not-found-card">
+        <div class="not-found-code">404</div>
+        <p class="not-found-title">Sorry for the inconvenience <br> This page hasn't been created yet</p>
+        <p class="not-found-body">
+            The page you're looking for isn't here — it might have been moved or not been created.
+        </p>
+        <div class="not-found-actions">
+            <a class="nf-btn nf-btn-primary" th:href="@{/}">Back to home</a>
+            <a class="nf-btn nf-btn-secondary" th:href="@{/contactus}">Report a broken link</a>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

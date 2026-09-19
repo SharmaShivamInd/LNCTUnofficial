@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/shared.css}">
+</head>
+
+<body>
+<!-- ===== NAVBAR ===== -->
+<header th:fragment="header">
+    <a th:href="@{/}">
+        <img alt="My Website Logo"
+             class="logo"
+             fetchpriority="high"
+             loading="eager"
+             th:src="@{/images/download (1).png}"
+        >
+    </a>
+
+
+    <div class="nav-container">
+        <input id="menu-toggle" type="checkbox">
+
+        <label class="hamburger" for="menu-toggle">
+            <img alt="Tab" src="../images/more.png" width="25px">
+        </label>
+
+        <nav class="navbar">
+
+            <label class="close-button" for="menu-toggle">✕</label>
+
+            <ul>
+
+                <li>
+                    <div class="mobile-row">
+                        <a style="text-decoration: none; color: inherit;" th:href="@{/about}"> ABOUT US </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="mobile-row">
+                       <a style="text-decoration: none; color: inherit;" href="../404.html">
+                           <span>NOTES</span>
+                       </a>
+                        <span class="arrow1">▼</span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="mobile-row">
+                        <span>MID-SEM PAPERS</span>
+                        <span class="arrow1">▼</span>
+                    </div>
+
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>
+                                <div class="mobile-row2">
+                                <span>
+                                    Computer Science & Engineering
+                                </span>
+                                    <span class="arrow">
+                                    ▼
+                                </span>
+                                </div>
+                                <div class="dropdown-content2">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{/2nd-sem}">1st Semester</a>
+                                        </li>
+                                        <li><a th:href="@{/1st-sem}">2nd Semester</a></li>
+                                        <li><a href="../404.html">3rd Semester</a></li>
+                                        <li><a href="../404.html">4th Semester</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mobile-row2">
+                                <span>
+                                    Artificial Intelligence & Machine Learning
+                                </span>
+                                    <span class="arrow">
+                                    ▼
+                                </span>
+                                </div>
+                                <div class="dropdown-content2">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{/1st-sem}">1st Semester</a>
+                                        </li>
+                                        <li><a th:href="@{/2nd-sem}">2nd Semester</a></li>
+                                        <li><a href="../404.html">3rd Semester</a></li>
+                                        <li><a href="../404.html">4th Semester</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mobile-row2">
+                                <span>
+                                    Artificial Intelligence & Data Science
+                                </span>
+                                    <span class="arrow">
+                                    ▼
+                                </span>
+                                </div>
+                                <div class="dropdown-content2">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{/1st-sem}">1st Semester</a>
+                                        </li>
+                                        <li><a th:href="@{/2nd-sem}">2nd Semester</a></li>
+                                        <li><a href="../404.html">3rd Semester</a></li>
+                                        <li><a href="../404.html">4th Semester</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mobile-row2">
+                                <span>
+                                    Electronics & Communication Engineering
+                                </span>
+                                    <span class="arrow">
+                                    ▼
+                                </span>
+                                </div>
+                                <div class="dropdown-content2">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{/2nd-sem}">1st Semester</a>
+                                        </li>
+                                        <li><a th:href="@{/1st-sem}">2nd Semester</a></li>
+                                        <li><a href="../404.html">3rd Semester</a></li>
+                                        <li><a href="../404.html">4th Semester</a></li>
+                                    </ul>
+                                </div>
+                </li>
+                <li>
+                    <div class="mobile-row2">
+                        <span>Mechanical Engineering</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <ul>
+                            <li>
+                                <a th:href="@{/1st-sem}">1st Semester</a>
+                            </li>
+                            <li>
+                                <a th:href="@{/2nd-sem}">2nd Semester</a>
+                            </li>
+                            <li>
+                                <a href="../404.html">3rd Semester</a>
+                            </li>
+                            <li>
+                                <a href="../404.html">4th Semester</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-row2">
+                        <span>Civil Engineering</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <ul>
+                            <li><a th:href="@{/1st-sem}">1st Semester</a></li>
+                            <li><a th:href="@{/2nd-sem}">2nd Semester</a></li>
+                            <li><a href="../404.html">3rd Semester</a></li>
+                            <li><a href="../404.html">4th Semester</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+    </div>
+    </li>
+    <li>
+        <div class="mobile-row">
+            <span>RGPV PAPERS</span>
+            <span class="arrow1">▼</span>
+        </div>
+
+        <div class="dropdown-content">
+            <ul>
+                <li>
+                    <div class="mobile-row2">
+                                <span>
+                                    Computer Science & Engineering
+                                </span>
+                        <span class="arrow">
+                                    ▼
+                                </span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <ul>
+                            <li>
+                                <a href="../404.html">1st Semester</a>
+                            </li>
+                            <li><a href="../404.html">2nd Semester</a></li>
+                            <li><a href="../404.html">3rd Semester</a></li>
+                            <li><a href="../404.html">4th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-row2">
+                                <span>
+                                    Artificial Intelligence & Machine Learning
+                                </span>
+                        <span class="arrow">
+                                    ▼
+                                </span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <ul>
+                            <li>
+                                <a href="../404.html">1st Semester</a>
+                            </li>
+                            <li><a href="../404.html">2nd Semester</a></li>
+                            <li><a href="../404.html">3rd Semester</a></li>
+                            <li><a href="../404.html">4th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-row2">
+                                <span>
+                                    Artificial Intelligence & Data Science
+                                </span>
+                        <span class="arrow">
+                                    ▼
+                                </span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <ul>
+                            <li>
+                                <a href="../404.html">1st Semester</a>
+                            </li>
+                            <li><a href="../404.html">2nd Semester</a></li>
+                            <li><a href="../404.html">3rd Semester</a></li>
+                            <li><a href="../404.html">4th Semester</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-row2">
+                                <span>
+                                    Electronics & Communication
+                                </span>
+                        <span class="arrow">
+                                    ▼
+                                </span>
+                        <div class="dropdown-content2">
+                            <ul>
+                                <li>
+                                    <a href="../404.html">1st Semester</a>
+                                </li>
+                                <li><a href="../404.html">2nd Semester</a></li>
+                                <li><a href="../404.html">3rd Semester</a></li>
+                                <li><a href="../404.html">4th Semester</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-row2">
+                        <span>Mechanical Engineering</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <ul>
+                            <li>
+                                <a href="../404.html">1st Semester</a>
+                            </li>
+                            <li>
+                                <a href="../404.html">2nd Semester</a>
+                            </li>
+                            <li>
+                                <a href="../404.html">3rd Semester</a>
+                            </li>
+                            <li>
+                                <a href="../404.html">4th Semester</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-row2">
+                        <span>Civil Engineering</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="dropdown-content2">
+                        <ul>
+                            <li>
+                                <a href="../404.html">1st Semester</a>
+                            </li>
+                            <li>
+                                <a href="../404.html">2nd Semester</a>
+                            </li>
+                            <li>
+                                <a href="../404.html">3rd Semester</a>
+                            </li>
+                            <li>
+                                <a href="../404.html">4th Semester</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </li>
+    <li>
+        <div class="mobile-row">
+            <a style="text-decoration: none; color: inherit;" th:href="@{/contactus}">CONTACT US</a>
+        </div>
+    </li>
+    </ul>
+
+    </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const isTouchDevice = !window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+          if (!isTouchDevice) return; // desktop mouse: hover CSS handles everything, skip JS entirely
+
+          document.querySelectorAll('.navbar li').forEach(li => {
+            const trigger = li.querySelector(':scope > .mobile-row, :scope > .mobile-row2');
+            const panel = li.querySelector(':scope > .dropdown-content, :scope > .dropdown-content2');
+            if (!trigger || !panel) return;
+
+            trigger.addEventListener('click', (e) => {
+              const isOpen = li.classList.contains('open');
+              li.parentElement.querySelectorAll(':scope > li.open').forEach(sib => {
+                if (sib !== li) sib.classList.remove('open');
+              });
+              li.classList.toggle('open', !isOpen);
+              e.stopPropagation();
+            });
+          });
+        });
+    </script>
+</header>
+
+</body>
+</html>

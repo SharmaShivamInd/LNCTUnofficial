@@ -1,0 +1,157 @@
+/* =========================================================
+   glass.css — Glassmorphism overrides
+   Add AFTER home.css, bt201.css, and shared.css on every page:
+     <link rel="stylesheet" th:href="@{/css/glass.css}">
+   Keeps every layout, size, font, color accent, and animation
+   exactly as-is — only surfaces (bg/border/shadow) change.
+   ========================================================= */
+
+/* ---- Glass recipes (CSS vars for reuse) ---- */
+:root {
+    --glass-bg:        rgba(255, 255, 255, 0.10);
+    --glass-bg-strong: rgba(255, 255, 255, 0.18);
+    --glass-bg-dark:   rgba(20, 20, 20, 0.35);
+    --glass-border:    1px solid rgba(255, 255, 255, 0.18);
+    --glass-border-dk: 1px solid rgba(255, 255, 255, 0.12);
+    --glass-blur:      blur(5px) saturate(180%);
+    --glass-blur-lg:   blur(6px) saturate(180%);
+    --glass-shadow:    0 8px 32px rgba(0, 0, 0, 0.25);
+    --glass-shadow-dk: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== 1st-sem / 2nd-sem subject cards ===== */
+.card-icon {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
+    color: #fff !important;
+}
+.subject-card:hover .card-icon {
+    background: var(--glass-bg-strong) !important;
+    border-color: rgba(110, 193, 228, 0.6) !important;
+}
+.subject-card h3 { color: #fff !important; text-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+
+/* ===== bt2xx page shell ===== */
+.container {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.page-header {
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 12px;
+}
+
+/* ===== Tabs ===== */
+.tabs label {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border) !important;
+    box-shadow: var(--glass-shadow);
+    color: #fff !important;
+}
+.tabs label:hover {
+    background: var(--glass-bg-strong) !important;
+}
+.tabs input:checked + label {
+    background: rgba(0, 123, 255, 0.45) !important;
+    border-color: rgba(0, 123, 255, 0.6) !important;
+}
+
+/* ===== Paper thumbnails ===== */
+.paper-thumbnail {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+.thumbnail-image {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+.thumbnail-info {
+    background: var(--glass-bg-dark) !important;
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    border-top: var(--glass-border-dk);
+}
+.thumbnail-overlay {
+    pointer-events: none;
+    background: rgba(255, 193, 7, 0.55) !important;
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+}
+
+/* ===== Meta badges ===== */
+.meta-badge {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    background: rgba(255, 193, 7, 0.45) !important;
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid rgba(255, 193, 7, 0.55) !important;
+    color: #fff !important;
+}
+.meta-badge:hover,
+.meta-badge:focus-visible {
+    background: rgba(224, 168, 0, 0.65) !important;
+}
+
+/* ===== Modal ===== */
+.modal {
+    background: rgba(0, 0, 0, 0.55) !important;
+
+}
+.modal-content {
+    background: var(--glass-bg) !important;
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow-dk);
+    border-radius: 16px;
+}
+.close-btn,
+.nav-arrow {
+    background: var(--glass-bg-dark) !important;
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border-dk);
+}
+.close-btn:hover,
+.close-btn:focus-visible {
+    background: rgba(255, 193, 7, 0.55) !important;
+}
+.nav-arrow:hover,
+.nav-arrow:focus-visible {
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+@media (max-width: 768px) {
+    /* Repeated card elements — biggest cumulative cost, drop blur, keep color */
+    .card-icon,
+    .paper-thumbnail,
+    .thumbnail-info,
+    .thumbnail-overlay,
+    .tabs label {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+    .card-icon { background: rgba(255, 255, 255, 0.14) !important; }
+    .paper-thumbnail { background: rgba(255, 255, 255, 0.14) !important; }
+    .thumbnail-info { background: rgba(20, 20, 20, 0.55) !important; }
+    .thumbnail-overlay { background: rgba(255, 193, 7, 0.65) !important; }
+    .tabs label { background: rgba(255, 255, 255, 0.14) !important; }
+
+    .meta-badge {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(255, 193, 7, 0.55) !important;
+    }
+
+}

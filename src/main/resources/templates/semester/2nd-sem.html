@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=4.0, user-scalable=yes" name="viewport">
+    <title>midsem-papers</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/shared.css}">
+    <link rel="stylesheet" th:href="@{/css/glass.css}">
+    <style>
+        .subjects-section {
+            padding: 20px 20px;
+            min-height: 100vh;
+            z-index: 1;
+        }
+
+        .subject-link {
+            text-decoration: none;
+            color: inherit;
+            width: auto;
+        }
+        .heading {
+            backdrop-filter: blur(5px) saturate(160%);
+            -webkit-backdrop-filter: blur(5px) saturate(160%);
+            border: 1px rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .subjects-section h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #ffc107;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+
+        }
+
+        .subjects-section h2 {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            color: #ffc107;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: #fff;
+            margin-bottom: 60px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+
+        }
+
+        .subject-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-icon {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .subject-card:hover .card-icon {
+            border-color: #6EC1E4;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            background: #f9f9f9;
+        }
+
+        .subject-card h3 {
+            text-align: center;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #0693e3;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .subjects-section {
+                padding: 60px 20px;
+            }
+
+            .subjects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                width: 100%;
+                justify-items: center;
+                justify-content: center;
+            }
+
+            .subject-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .card-icon {
+                width: 140px;
+                height: 140px;
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+
+<section class="subjects-section">
+    <div class="heading">
+    <h1>Mid-Semester Papers </h1>
+    <h2>1st/2nd Semester</h2>
+    <p class="subtitle">Select a subject to view papers</p>
+    </div>
+
+    <div class="subjects-grid">
+        <a class="subject-link" th:href="@{/midsem-papers/bt101}">
+            <div class="subject-card">
+                <div class="card-icon">BT-101</div>
+                <h3>Engineering Chemistry</h3>
+            </div>
+        </a>
+
+        <a class="subject-link" th:href="@{/midsem-papers/bt202}">
+            <div class="subject-card">
+                <div class="card-icon">BT-202</div>
+                <h3>Engineering Mathematics-II</h3>
+            </div>
+        </a>
+
+        <a class="subject-link" th:href="@{/midsem-papers/bt202}">
+            <div class="subject-card">
+                <div class="card-icon">BT-202</div>
+                <h3>Engineering Mathematics-II</h3>
+            </div>
+        </a>
+
+        <a class="subject-link" th:href="@{/midsem-papers/bt103}">
+            <div class="subject-card">
+                <div class="card-icon">BT-103</div>
+                <h3>English for Communication</h3>
+            </div>
+        </a>
+
+        <a class="subject-link" th:href="@{/midsem-papers/bt104}">
+            <div class="subject-card">
+                <div class="card-icon">BT-104</div>
+                <h3>Basic Electrical and Electronics Engineering(BEEE)</h3>
+            </div>
+        </a>
+        <a class="subject-link" th:href="@{/midsem-papers/bt105}">
+            <div class="subject-card">
+                <div class="card-icon">BT-105</div>
+                <h3>Engineering Graphics(EG)</h3>
+            </div>
+        </a>
+    </div>
+</section>
+</body>
+</html>

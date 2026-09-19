@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact Us — LNCT Unofficial</title>
+    <meta name="description"
+          content="Get in touch with the LNCT Unofficial student portal team — questions, feedback, and suggestions welcome.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us — LNCT Unofficial">
+    <meta property="og:description"
+          content="Get in touch with the LNCT Unofficial student portal.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/shared.css}">
+    <link rel="stylesheet" th:href="@{/css/contact.css}">
+    <link rel="stylesheet" th:href="@{/css/glass.css}">
+</head>
+
+<body>
+<div th:if="${param.success}" class="success-msg">
+    Message Sent Successfully!
+</div>
+<!-- ===== NAVBAR ===== -->
+<div th:replace="~{fragments/header :: header}"></div>
+
+<!-- ===== CONTACT PAGE ===== -->
+<main class="container">
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p class="lead">
+            Questions, feedback, or want to help improve the portal?
+            Reach out — we read every message.
+        </p>
+    </section>
+
+    <section class="contact-grid" aria-label="Contact">
+
+        <!-- ===== CONTACT INFO ===== -->
+        <aside class="contact-info glass-card" aria-label="Contact details">
+            <h2>Reach us at</h2>
+
+            <!-- TODO: replace placeholders with real details -->
+            <ul class="info-list">
+                <li>
+                    <span class="info-label">Email</span>
+                    <a href="mailto:shivamsharmacet@gmail.com">Shivamsharmacet@gmail.com</a>
+                </li>
+                <li>
+                    <span class="info-label">Phone</span>
+                    <a href="tel:+910000000000">+91 810*****64</a>
+                </li>
+                <li>
+                    <span class="info-label">Address</span>
+                    <address>
+                        Patel nagar,<br>
+                        Raisen Road, Bhopal, Madhya Pradesh, India
+                    </address>
+                </li>
+                <li>
+                    <span class="info-label">Social</span>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="https://github.com/SharmaShivamInd" aria-label="GitHub">GitHub</a>
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- ===== CONTACT FORM (display-only) ===== -->
+        <form class="contact-form glass-card"
+              action="/mail"
+              method="post"
+              onsubmit="return true;"
+              aria-label="Contact form">
+            <h2>Send a message</h2>
+
+            <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text"
+                       required maxlength="50"
+                       autocomplete="name"
+                       placeholder="Your full name">
+            </div>
+
+            <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email"
+                       required maxlength="63"
+                       autocomplete="email"
+                       placeholder="you@example.com">
+            </div>
+
+            <div class="field">
+                <label for="cf-subject">Subject</label>
+                <input id="cf-subject" name="subject" type="text"
+                       required maxlength="150"
+                       placeholder="What's this about?">
+            </div>
+
+            <div class="field">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message"
+                          required maxlength="1000" rows="6"
+                          placeholder="Tell us what's on your mind..."></textarea>
+            </div>
+
+            <button type="submit" class="send-btn">Send message</button>
+
+        </form>
+
+    </section>
+</main>
+
+</body>
+</html>

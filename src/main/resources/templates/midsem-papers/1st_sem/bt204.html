@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap"
+          rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=4.0, user-scalable=yes" name="viewport">
+    <title>BT204 Basic Civil Engineering & Mechanics | LNCT</title>
+    <meta name="description" content="Download BT204 Basic Civil Engineering & Mechanics midsem question paper for LNCT (RGPV) students. Free previous year paper." />
+    <meta name="keywords" content="BT204, Basic Civil Engineering Mechanics midsem paper, LNCT Civil paper, RGPV BT204, LNCT midsem papers" />
+    <link rel="stylesheet" th:href="@{/css/bt201.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/shared.css}">
+    <link rel="stylesheet" th:href="@{/css/glass.css}">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<div th:replace="~{fragments/header :: header}"></div>
+
+
+<!-- ===== PAGE CONTENT ===== -->
+<div class="container">
+
+    <!-- ===== PAGE HEADER ===== -->
+    <div class="page-header">
+        <h1>Mid-Semester Papers</h1>
+        <p>BT-102<br>Basic Civil Engineering and Mechanics(BCEM)</p>
+    </div>
+
+
+    <!-- ===== GALLERY ===== -->
+    <div class="tabs">
+
+        <input checked id="tab3" name="tab" type="radio">
+        <label for="tab3">All Papers</label>
+        <!-- Tab 1 Radio -->
+        <input id="tab1" name="tab" type="radio">
+        <label for="tab1">📚 Mid Sem 1</label>
+
+        <!-- Tab 2 Radio -->
+        <input id="tab2" name="tab" type="radio">
+        <label for="tab2">📚 Mid Sem 2</label>
+
+        <div class="content" id="content3">
+            <div class="gallery">
+                <!-- Paper 1 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="()">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">December 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/1st-sem/bt204_Dec25.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/1st-sem/bt204_Dec25.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <img alt="October 2025"
+                             src="/images/1st-sem/bt204_oct25.webp">
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">October 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/1st-sem/bt204_oct25.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/1st-sem/bt204_oct25.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content" id="content1">
+            <div class="gallery">
+                <!-- Paper 1 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <img alt="October 2025"
+                             src="/images/1st-sem/bt204_oct25.webp">
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">October 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/1st-sem/bt204_oct25.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/1st-sem/bt204_oct25.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2 Content -->
+        <div class="content" id="content2">
+            <div class="gallery">
+                <!-- Paper 5 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <img alt="December 2025" src="/images/1st-sem/bt204_Dec25.webp">
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">December 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/1st-sem/bt204_Dec25.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/1st-sem/bt204_Dec25.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL/LIGHTBOX ===== -->
+    <div class="modal" id="modal" onclick="closeModal()">
+        <span onclick="closeModal()">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <img alt="Paper" class="modal-image" id="modalImage" src="">
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+
+    function openModal(imagesrc) {
+    document.getElementById('modal').classList.add('active');
+    document.getElementById('modalImage').src = imagesrc;
+}
+
+    function closeModal() {
+        document.getElementById('modal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowRight') nextPaper();
+        if (e.key === 'ArrowLeft') previousPaper();
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=4.0, user-scalable=yes">
+    <title>BT101 Engineering Chemistry | LNCT</title>
+    <meta name="description" content="Download BT101 Engineering Chemistry midsem question paper for LNCT (RGPV) students. Free previous year paper for revision." />
+    <meta name="keywords" content="BT101, Engineering Chemistry midsem paper, LNCT Chemistry paper, RGPV BT101, LNCT midsem papers" />
+    <link th:href="@{/css/bt201.css}" rel="stylesheet">
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/shared.css}">
+    <link rel="stylesheet" th:href="@{/css/glass.css}">
+    <script th:src="@{/script.js}"></script>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<div th:replace="~{fragments/header :: header}"></div>
+
+
+<!-- ===== PAGE CONTENT ===== -->
+<div class="container">
+
+    <!-- ===== PAGE HEADER ===== -->
+    <div class="page-header">
+        <h1>Mid-Semester Papers</h1>
+        <p>BT-101<br>Engineering Chemistry</p>
+    </div>
+
+    <!-- ===== GALLERY ===== -->
+    <div class="tabs">
+
+        <input checked id="tab3" name="tab" type="radio">
+        <label for="tab3">All Papers</label>
+        <!-- Tab 1 Radio -->
+        <input id="tab1" name="tab" type="radio">
+        <label for="tab1">📚 Mid Sem 1</label>
+
+        <!-- Tab 2 Radio -->
+        <input id="tab2" name="tab" type="radio">
+        <label for="tab2">📚 Mid Sem 2</label>
+
+        <div class="content" id="content3">
+            <div class="gallery">
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_july26.webp}">
+                            <img alt="July 2026"
+                                 src="/images/2nd-sem/bt101_july26.jpeg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">July 2026</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_july26.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_july26.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 1 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_may26.webp}">
+                            <img alt="May 2026"
+                                 src="/images/2nd-sem/bt101_may26.webp">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">May 2026</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_may26.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_may26.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_dec25.webp}">
+                            <img alt="Dec 2025" src="/images/2nd-sem/bt101_dec25.webp">
+                        </picture>
+
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">December 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_dec25.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_dec25.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 3 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_oct25.webp}">
+                            <img alt="Oct 2025"
+                                 src="/images/2nd-sem/bt101_oct25.jpeg">
+                        </picture>
+
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">October 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_oct25.jpeg}')|">view</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_oct25.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 4 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="max-width: 768px" th:srcset="@{/images/thumbnails2/bt101_may25.webp}">
+                            <img alt="May 2025"
+                                      src="/images/2nd-sem/bt101_may25.jpeg" loading="lazy">
+                        </picture>
+
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">May 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_may25.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_may25.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width:768px)" th:srcset="@{/images/thumbnails2/bt101_jan25.webp}">
+                            <img alt="Jan 2025" src="/images/2nd-sem/bt101_jan25.jpeg">
+                        </picture>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">January 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_jan25.jpeg}')|">view</span>
+                            <a class="meta-badge" download="/images/2nd-sem/bt101_jan25.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paper 5 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_nov23.webp}">
+                            <img alt="Nov 2023"
+                                      src="/images/2nd-sem/bt101_nov23.jpeg" loading="lazy"></picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">November 2023</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_nov23.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_nov23.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 6 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_nov23.webp}">
+                            <img alt="May 22"
+                                 src="/images/2nd-sem/bt101_may22.jpeg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">May 2022</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge"  th:onclick="|openModal('@{/images/2nd-sem/bt101_may22.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_may22.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 7 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_sep19.webp}">
+                            <img alt="sep 2019"
+                                      src="/images/2nd-sem/bt101_sep19.jpeg" loading="lazy">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">Sep 2019</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_sep19.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_sep19.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content" id="content1">
+            <div class="gallery">
+                <!-- Paper 1 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <img alt="May 2025"
+                             src="/images/2nd-sem/bt101_May26.webp">
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">May 2026</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_May26.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_May26.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <img alt="Oct 2025"
+                             src="/images/2nd-sem/bt101_oct25.jpeg">
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">October 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_oct25.jpeg}')|">view</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_oct25.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 4 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="max-width: 768px" th:srcset="@{/images/thumbnails2/bt101_may25.webp}">
+                            <img alt="May 2025"
+                                 src="/images/2nd-sem/bt101_may25.jpeg" loading="lazy">
+                        </picture>
+
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">May 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_may25.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_may25.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 5 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_nov23.webp}">
+                            <img alt="Nov 2023"
+                                 src="/images/2nd-sem/bt101_nov23.jpeg" loading="lazy"></picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">November 2023</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_nov23.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_nov23.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 6 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_nov23.webp}">
+                            <img alt="May 22"
+                                 src="/images/2nd-sem/bt101_may22.jpeg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">May 2022</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge"  th:onclick="|openModal('@{/images/2nd-sem/bt101_may22.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_may22.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 7 -->
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_sep19.webp}">
+                            <img alt="sep 2019"
+                                 src="/images/2nd-sem/bt101_sep19.jpeg" loading="lazy">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">Sep 2019</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_sep19.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_sep19.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab 2 Content -->
+        <div class="content" id="content2">
+            <div class="gallery">
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_july26.webp}">
+                            <img alt="July 2026"
+                                 src="/images/2nd-sem/bt101_july26.jpeg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">July 2026</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_july26.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_july26.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_dec25.webp}">
+                            <img alt="Dec 2025" src="/images/2nd-sem/bt101_dec25.webp">
+                        </picture>
+
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">December 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_dec25.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_dec25.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails2/bt101_dec25.webp}">
+                            <img alt="Dec 2025" src="/images/2nd-sem/bt101_dec25.webp">
+                        </picture>
+
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">December 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/2nd-sem/bt101_dec25.webp}')|">View</span>
+                            <a class="meta-badge" download href="/images/2nd-sem/bt101_dec25.webp">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL/LIGHTBOX ===== -->
+    <div class="modal" id="modal" onclick="closeModal()">
+        <span onclick="closeModal()">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal()">✕</button>
+            <img alt="Paper" class="modal-image" id="modalImage" src="">
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+
+    function openModal(imagesrc) {
+    document.getElementById('modal').classList.add('active');
+    document.getElementById('modalImage').src = imagesrc;
+}
+
+    function closeModal() {
+        document.getElementById('modal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+</script>
+
+</body>
+
+</html>
