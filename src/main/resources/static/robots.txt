@@ -4,4 +4,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /error
 
-Sitemap: https://yoursite.com/sitemap.xml
+Sitemap: https://lnctunofficial.onrender.com/sitemap.xml
