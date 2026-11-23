@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=4.0, user-scalable=yes">
+    <title>AL-304 Artificial Intelligence | LNCT</title>
+    <link th:href="@{/css/bt201.css}" rel="stylesheet">
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+    <link th:href="@{/css/shared.css}" rel="stylesheet">
+    <link th:href="@{/css/glass.css}" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+<div class="container">
+    <div class="page-header">
+        <h1>Mid-Semester Papers</h1>
+        <p>AL-304<br>Artificial Intelligence</p>
+    </div>
+    <div class="tabs">
+        <input checked id="tab3" name="tab" type="radio">
+        <label for="tab3">All Papers</label>
+        <div class="content" id="content3">
+            <div class="gallery"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

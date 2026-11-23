@@ -13,6 +13,7 @@
     <link rel="stylesheet" th:href="@{/css/shared.css}">
     <link rel="stylesheet" th:href="@{/css/glass.css}">
     <script th:src="@{/script.js}"></script>
+    <th:block th:insert="fragments/imageviewer :: imageViewer"></th:block>
 </head>
 
 <body>
@@ -419,38 +420,7 @@
             </div>
         </div>
     </div>
-
-    <!-- ===== MODAL/LIGHTBOX ===== -->
-    <div class="modal" id="modal" onclick="closeModal()">
-        <span onclick="closeModal()">&times;</span>
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <button class="close-btn" onclick="closeModal()">✕</button>
-            <img alt="Paper" class="modal-image" id="modalImage" src="">
-            <div class="modal-title" id="modalTitle"></div>
-            <div class="modal-counter" id="modalCounter"></div>
-        </div>
-    </div>
 </div>
-
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-
-    function openModal(imagesrc) {
-    document.getElementById('modal').classList.add('active');
-    document.getElementById('modalImage').src = imagesrc;
-}
-
-    function closeModal() {
-        document.getElementById('modal').classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-
-    // Close modal on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-    });
-</script>
-
 </body>
 
 </html>

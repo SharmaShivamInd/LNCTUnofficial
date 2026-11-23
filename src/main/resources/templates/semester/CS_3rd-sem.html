@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700;800&display=swap">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=4.0, user-scalable=yes" name="viewport">
+    <title>3rd Semester Mid-Semester Papers</title>
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/shared.css}">
+    <link rel="stylesheet" th:href="@{/css/glass.css}">
+    <style>
+        .subjects-section {
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .subject-link {
+            text-decoration: none;
+            color: inherit;
+            width: auto;
+        }
+
+        .subjects-section h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #93C5FD;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .subjects-section h2 {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            color: #93C5FD;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: #CBD5E1;
+            margin-bottom: 60px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: center;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .subject-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            cursor: default;
+            transition: all 0.3s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-icon {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .subject-card:hover .card-icon {
+            border-color: #6EC1E4;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            background: #f9f9f9;
+        }
+
+        .subject-card h3 {
+            text-align: center;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: #0693e3;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .subjects-section {
+                padding: 60px 20px;
+            }
+
+            .subjects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                width: 100%;
+            }
+
+            .card-icon {
+                width: 140px;
+                height: 140px;
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<section class="subjects-section">
+    <h1>CSE Mid-Sem Papers</h1>
+    <h2>3rd Semester</h2>
+    <p class="subtitle">Select a subject to view papers</p>
+
+    <div class="subjects-grid">
+        <a class="subject-link" th:href="@{/midsem-papers/es301}">
+            <div class="subject-card">
+                <div class="card-icon">ES-301</div>
+                <h3>Energy &amp; Environmental Engineering (EEE)</h3>
+            </div>
+        </a>
+
+        <a class="subject-link" th:href="@{/midsem-papers/cs302}">
+            <div class="subject-card">
+                <div class="card-icon">CS-302</div>
+                <h3>Discrete Structure</h3>
+            </div>
+        </a>
+
+        <a class="subject-link" th:href="@{/midsem-papers/cs303}">
+            <div class="subject-card">
+                <div class="card-icon">CS-303</div>
+                <h3>Data Structures</h3>
+            </div>
+        </a>
+
+        <a class="subject-link" th:href="@{/midsem-papers/cs304}">
+            <div class="subject-card">
+                <div class="card-icon">CS-304</div>
+                <h3>Digital Systems</h3>
+            </div>
+        </a>
+
+        <a class="subject-link" th:href="@{/midsem-papers/cs305}">
+            <div class="subject-card">
+                <div class="card-icon">CS-305</div>
+                <h3>Object-Oriented Programming &amp; Methodology</h3>
+            </div>
+        </a>
+    </div>
+</section>
+</body>
+</html>

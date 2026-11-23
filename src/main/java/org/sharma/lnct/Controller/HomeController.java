@@ -40,6 +40,66 @@ public class HomeController {
         return "semester/2nd-sem";
     }
 
+    @GetMapping("/CS_3rd-sem")
+    public String CS_thirdSemester(){
+        return "semester/CS_3rd-sem";
+    }
+
+    @GetMapping("/AL_3rd-sem")
+    public String AL_thirdSemester(){
+        return "semester/AL_3rd-sem";
+    }
+
+    @GetMapping("/midsem-papers/al301")
+    public String al301(){
+        return "midsem-papers/AL_3rd-sem/al301";
+    }
+
+    @GetMapping("/midsem-papers/al302")
+    public String al302(){
+        return "midsem-papers/AL_3rd-sem/al302";
+    }
+
+    @GetMapping("/midsem-papers/al303")
+    public String al303(){
+        return "midsem-papers/AL_3rd-sem/al303";
+    }
+
+    @GetMapping("/midsem-papers/al304")
+    public String al304(){
+        return "midsem-papers/AL_3rd-sem/al304";
+    }
+
+    @GetMapping("/midsem-papers/al305")
+    public String al305(){
+        return "midsem-papers/AL_3rd-sem/al305";
+    }
+
+    @GetMapping("/midsem-papers/es301")
+    public String es301(){
+        return "midsem-papers/CS_3rd-sem/es301";
+    }
+
+    @GetMapping("/midsem-papers/cs302")
+    public String cs302(){
+        return "midsem-papers/CS_3rd-sem/cs302";
+    }
+
+    @GetMapping("/midsem-papers/cs303")
+    public String cs303(){
+        return "midsem-papers/CS_3rd-sem/cs303";
+    }
+
+    @GetMapping("/midsem-papers/cs304")
+    public String cs304(){
+        return "midsem-papers/CS_3rd-sem/cs304";
+    }
+
+    @GetMapping("/midsem-papers/cs305")
+    public String cs305(){
+        return "midsem-papers/CS_3rd-sem/cs305";
+    }
+
     @GetMapping("/midsem-papers/bt101")
     public String bt101(){
         return "midsem-papers/2nd_sem/bt101";
