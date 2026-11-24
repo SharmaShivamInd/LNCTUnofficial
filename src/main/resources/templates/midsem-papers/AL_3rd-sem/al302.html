@@ -8,6 +8,7 @@
     <link th:href="@{/css/home.css}" rel="stylesheet">
     <link th:href="@{/css/shared.css}" rel="stylesheet">
     <link th:href="@{/css/glass.css}" rel="stylesheet">
+    <th:block th:insert="fragments/imageviewer :: imageViewer"></th:body>
 </head>
 <body>
 <div th:replace="~{fragments/header :: header}"></div>
@@ -24,7 +25,7 @@
                 <div class="paper-thumbnail">
                     <div class="thumbnail-image">
                         <picture>
-                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails3/AL302_Nov26.webp}">
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails3/AL302_Nov26.jpeg}">
                             <img alt="Nov 26"
                                  src="/images/AL_3rd-sem/AL302_Nov26.jpeg">
                         </picture>
