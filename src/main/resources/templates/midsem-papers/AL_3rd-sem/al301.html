@@ -8,6 +8,7 @@
     <link th:href="@{/css/home.css}" rel="stylesheet">
     <link th:href="@{/css/shared.css}" rel="stylesheet">
     <link th:href="@{/css/glass.css}" rel="stylesheet">
+    <th:block th:insert="fragments/imageviewer :: imageViewer"></th:block>
 </head>
 <body>
 <div th:replace="~{fragments/header :: header}"></div>
@@ -20,7 +21,103 @@
         <input checked id="tab3" name="tab" type="radio">
         <label for="tab3">All Papers</label>
         <div class="content" id="content3">
-            <div class="gallery"></div>
+            <div class="gallery">
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails3/AL301_Nov26.webp}">
+                            <img alt="Nov 26"
+                                 src="/images/AL_3rd-sem/AL301_Nov26.jpeg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">November 2026</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/AL_3rd-sem/AL301_Nov26.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/AL_3rd-sem/AL301_Nov26.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/AL_3rd-sem/AL301_June25.jpg}">
+                            <img alt="June 2025"
+                                 src="/images/AL_3rd-sem/AL301_June25.jpg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">June 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/AL_3rd-sem/AL301_June25.jpg}')|">View</span>
+                            <a class="meta-badge" download href="/images/AL_3rd-sem/AL301_June25.pdf">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/thumbnails3/AL301_Oct25.webp}">
+                            <img alt="Oct 2025"
+                                 src="/images/AL_3rd-sem/AL301_Oct25.jpg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">October 2025</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/AL_3rd-sem/AL301_Oct25.jpg}')|">View</span>
+                            <a class="meta-badge" download href="/images/AL_3rd-sem/AL301_Oct25.jpg">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/AL_3rd-sem/AL301_Dec24.jpg}">
+                            <img alt="Dec 24"
+                                 src="/images/AL_3rd-sem/AL301_Dec24.jpg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">December 2024</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/AL_3rd-sem/AL301_Dec24.jpg}')|">View</span>
+                            <a class="meta-badge" download href="/images/AL_3rd-sem/AL301_Dec24.pdf">Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <picture>
+                            <source media="(max-width: 768px)" th:srcset="@{/images/AL_3rd-sem/AL301_Dec23.webp}">
+                            <img alt="Dec 23"
+                                 src="/images/AL_3rd-sem/AL301_Dec23.jpeg">
+                        </picture>
+                        <div class="thumbnail-overlay">
+                            <div class="view-icon">👁️</div>
+                        </div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">December 2023</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/AL_3rd-sem/AL301_Dec23.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/AL_3rd-sem/AL301_Dec23.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

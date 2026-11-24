@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=4.0, user-scalable=yes">
+    <title>EC-301 Engineering Mathematics-III | LNCT</title>
+    <link th:href="@{/css/bt201.css}" rel="stylesheet">
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+    <link th:href="@{/css/shared.css}" rel="stylesheet">
+    <link th:href="@{/css/glass.css}" rel="stylesheet">
+    <th:block th:insert="fragments/imageviewer :: imageViewer"></th:block>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+<div class="container">
+    <div class="page-header">
+        <h1>Mid-Semester Papers</h1>
+        <p>EC-301<br>Engineering Mathematics-III</p>
+    </div>
+    <div class="tabs">
+        <input checked id="tab3" name="tab" type="radio">
+        <label for="tab3">All Papers</label>
+        <div class="content" id="content3">
+            <div class="gallery">
+                <div class="paper-thumbnail">
+                    <div class="thumbnail-image">
+                        <img alt="November 2026" src="/images/EC_3rd-sem/EC301_Nov26.jpeg">
+                        <div class="thumbnail-overlay"><div class="view-icon">👁️</div></div>
+                    </div>
+                    <div class="thumbnail-info">
+                        <div class="thumbnail-title">November 2026</div>
+                        <div class="thumbnail-meta">
+                            <span class="meta-badge" th:onclick="|openModal('@{/images/EC_3rd-sem/EC301_Nov26.jpeg}')|">View</span>
+                            <a class="meta-badge" download href="/images/EC_3rd-sem/EC301_Nov26.jpeg">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

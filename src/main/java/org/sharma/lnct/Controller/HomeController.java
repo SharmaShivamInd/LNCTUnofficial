@@ -50,6 +50,36 @@ public class HomeController {
         return "semester/AL_3rd-sem";
     }
 
+    @GetMapping("/EC_3rd-sem")
+    public String EC_thirdSemester(){
+        return "semester/EC_3rd-sem";
+    }
+
+    @GetMapping("/midsem-papers/ec301")
+    public String ec301(){
+        return "midsem-papers/EC_3rd-sem/ec301";
+    }
+
+    @GetMapping("/midsem-papers/ec302")
+    public String ec302(){
+        return "midsem-papers/EC_3rd-sem/ec302";
+    }
+
+    @GetMapping("/midsem-papers/ec303")
+    public String ec303(){
+        return "midsem-papers/EC_3rd-sem/ec303";
+    }
+
+    @GetMapping("/midsem-papers/ec304")
+    public String ec304(){
+        return "midsem-papers/EC_3rd-sem/ec304";
+    }
+
+    @GetMapping("/midsem-papers/ec305")
+    public String ec305(){
+        return "midsem-papers/EC_3rd-sem/ec305";
+    }
+
     @GetMapping("/midsem-papers/al301")
     public String al301(){
         return "midsem-papers/AL_3rd-sem/al301";
